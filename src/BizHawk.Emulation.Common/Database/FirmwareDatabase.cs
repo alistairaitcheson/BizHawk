@@ -17,8 +17,11 @@ namespace BizHawk.Emulation.Common
 
 		public static readonly IReadOnlyCollection<FirmwareRecord> FirmwareRecords;
 
+		public static readonly IReadOnlyList<FirmwarePatchOption> AllPatches;
+
 		static FirmwareDatabase()
 		{
+			List<FirmwarePatchOption> allPatches = new();
 			Dictionary<string, FirmwareFile> filesByHash = new();
 			List<FirmwareOption> options = new();
 			List<FirmwareRecord> records = new();
@@ -318,6 +321,21 @@ namespace BizHawk.Emulation.Common
 			Option("GBC", "AGB", File("FA5287E24B0FA533B3B5EF2B28A81245346C1A0F", 2304, "agb.bin", "Game Boy Color Boot Rom (GBA)"), FirmwareOptionStatus.Ideal);
 			Option("GBC", "AGB", File("1ECAFA77AB3172193F3305486A857F443E28EBD9", 2304, "agb_gambatte.bin", "Game Boy Color Boot Rom (GBA, Gambatte RE)"), FirmwareOptionStatus.Bad);
 
+			allPatches.Add(new(
+				"4ED31EC6B0B175BB109C0EB5FD3D193DA823339F",
+				new FirmwarePatchData(0xFD, new byte[] { 0xFF }, overwrite: true),
+				"4E68F9DA03C310E84C523654B9026E51F26CE7F0"));
+
+			allPatches.Add(new(
+				"4E68F9DA03C310E84C523654B9026E51F26CE7F0",
+				new FirmwarePatchData(0xFD, new byte[] { 0x01 }, overwrite: true),
+				"4ED31EC6B0B175BB109C0EB5FD3D193DA823339F"));
+
+			allPatches.Add(new(
+				"1293D68BF9643BC4F36954C1E80E38F39864528D",
+				new FirmwarePatchData(0xF3, new byte[] { 0x03, 0x00, 0xCD, 0x1D, 0xD5, 0xAA, 0x4F, 0x90, 0x74 }),
+				"1ECAFA77AB3172193F3305486A857F443E28EBD9"));
+
 			Firmware("PCFX", "BIOS", "PCFX bios");
 			var pcfxbios = File("1A77FD83E337F906AECAB27A1604DB064CF10074", 1024 * 1024, "PCFX_bios.bin", "PCFX BIOS 1.00");
 			var pcfxv101 = File("8B662F7548078BE52A871565E19511CCCA28C5C8", 1024 * 1024, "PCFX_v101.bin", "PCFX BIOS 1.01");
@@ -335,6 +353,7 @@ namespace BizHawk.Emulation.Common
 			Option("PS2", "BIOS", File("F9229FE159D0353B9F0632F3FDC66819C9030458", 4 * 1024 * 1024, "ps2-0230a-20080220.bin", "PS2 Bios"), FirmwareOptionStatus.Ideal);
 			Option("PS2", "BIOS", File("9915B5BA56798F4027AC1BD8D10ABE0C1C9C326A", 4 * 1024 * 1024, "ps2-0230e-20080220.bin", "PS2 Bios"));
 
+			AllPatches = allPatches;
 			FirmwareFilesByHash = filesByHash;
 			FirmwareOptions = options;
 			FirmwareRecords = records;
