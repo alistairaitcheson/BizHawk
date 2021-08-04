@@ -71,34 +71,13 @@ namespace BizHawk.Emulation.Cores.Nintendo.Gameboy
 					flags |= LibGambatte.LoadFlags.MULTICART_COMPAT;
 				}
 
-				byte[] bios;
-				string biosSystemId;
-				string biosId;
-
 				IsCgb = (flags & LibGambatte.LoadFlags.CGB_MODE) == LibGambatte.LoadFlags.CGB_MODE;
-				biosSystemId = IsCgb ? "GBC" : "GB";
-				biosId = ((_syncSettings.ConsoleMode == GambatteSyncSettings.ConsoleModeType.GBA) && !_syncSettings.PatchBIOS) ? "AGB" : "World";
 
 				if (_syncSettings.EnableBIOS)
 				{
-					bios = comm.CoreFileProvider.GetFirmwareOrThrow(new(biosSystemId, biosId), "BIOS Not Found, Cannot Load.  Change SyncSettings to run without BIOS.");
-					if (_syncSettings.PatchBIOS)
-					{
-						if (!IsCgb)
-						{
-							bios[0xFD] ^= 0xFE; // patch from dmg<->mgb
-						}
-						else if (_syncSettings.ConsoleMode == GambatteSyncSettings.ConsoleModeType.GBA)
-						{
-							// patch from cgb->agb re
-							bios[0xF3] ^= 0x03;
-							for (var i = 0xF5; i < 0xFB;)
-							{
-								bios[i] = bios[++i];
-							}
-							bios[0xFB] ^= 0x74;
-						}
-					}
+					var bios = comm.CoreFileProvider.GetFirmwareOrThrow(
+						new(IsCgb ? "GBC" : "GB", _syncSettings.ConsoleMode is GambatteSyncSettings.ConsoleModeType.GBA ? "AGB" : "World"),
+						"BIOS Not Found, Cannot Load.  Change SyncSettings to run without BIOS."); // https://github.com/TASVideos/BizHawk/issues/2832 tho
 					if (LibGambatte.gambatte_loadbiosbuf(GambatteState, bios, (uint)bios.Length) != 0)
 					{
 						throw new InvalidOperationException($"{nameof(LibGambatte.gambatte_loadbiosbuf)}() returned non-zero (bios error)");
