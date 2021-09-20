@@ -59,7 +59,16 @@ namespace BizHawk.Emulation.Cores.Nintendo.N64.NativeApi
 		/// </summary>
 		public uint GetSamplingRate()
 		{
-			return (uint)dllGetAudioRate();
+			uint retVal = 0;
+			try
+			{
+				retVal = (uint)dllGetAudioRate();
+			}
+			catch (System.AccessViolationException exception)
+			{
+				System.Diagnostics.Debug.WriteLine("!!!!! GetSamplingRate error");
+			}
+			return retVal;
 		}
 
 		/// <summary>

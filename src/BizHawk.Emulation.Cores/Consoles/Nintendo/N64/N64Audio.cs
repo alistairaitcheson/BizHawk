@@ -57,20 +57,27 @@ namespace BizHawk.Emulation.Cores.Nintendo.N64
 		/// </summary>
 		public void DoAudioFrame()
 		{
-			uint m64pSamplingRate = api.GetSamplingRate();
-			if (m64pSamplingRate != SamplingRate)
-				SamplingRate = m64pSamplingRate;
-
-			int audioBufferSize = api.GetAudioBufferSize();
-			if (audioBuffer.Length < audioBufferSize)
-				audioBuffer = new short[audioBufferSize];
-
-			if (audioBufferSize > 0)
+			try
 			{
-				api.GetAudioBuffer(audioBuffer);
-				if (RenderSound)
-					Resampler.EnqueueSamples(audioBuffer, audioBufferSize / 2);
+				uint m64pSamplingRate = api.GetSamplingRate();
+				if (m64pSamplingRate != SamplingRate)
+					SamplingRate = m64pSamplingRate;
+
+				int audioBufferSize = api.GetAudioBufferSize();
+				if (audioBuffer.Length < audioBufferSize)
+					audioBuffer = new short[audioBufferSize];
+
+				if (audioBufferSize > 0)
+				{
+					api.GetAudioBuffer(audioBuffer);
+					if (RenderSound)
+						Resampler.EnqueueSamples(audioBuffer, audioBufferSize / 2);
+				}
+			} catch
+			{
+				System.Diagnostics.Debug.WriteLine("!!!!!!!!!!! DoAudioFrame error");
 			}
+
 		}
 
 		public void Dispose()

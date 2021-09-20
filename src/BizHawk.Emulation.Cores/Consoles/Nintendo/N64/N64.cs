@@ -84,7 +84,10 @@ namespace BizHawk.Emulation.Cores.Nintendo.N64
 
 			// Order is important because the register with the mupen core
 			_videoProvider = new N64VideoProvider(api, videosettings);
-			_audioProvider = new N64Audio(api);
+			if (_audioProvider == null)
+			{
+				_audioProvider = new N64Audio(api);
+			}
 			_inputProvider = new N64Input(this.AsInputPollable(), api, _syncSettings.Controllers);
 			(ServiceProvider as BasicServiceProvider).Register<IVideoProvider>(_videoProvider);
 			(ServiceProvider as BasicServiceProvider).Register<ISoundProvider>(_audioProvider.Resampler);
