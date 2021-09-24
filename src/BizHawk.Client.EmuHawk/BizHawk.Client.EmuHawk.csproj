@@ -628,6 +628,10 @@
 	  <None Update="_lifesettings\SUPER MARIO BROS. NES.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
+	  <None Update="_lifesettings\SUPER MARIO BROTHERS 2 NES.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+		
 	  <None Update="_lifesettings\SUPER MARIO KART SNES.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
@@ -827,6 +831,9 @@
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	  <None Update="_shuffletriggers\Defaults\SUPER MARIO BROS NES.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="_shuffletriggers\Defaults\SUPER MARIO BROTHERS 2 NES.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	  <None Update="_shuffletriggers\Defaults\SUPER MARIO KART SNES.txt">
@@ -1058,6 +1065,9 @@
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	  <None Update="_shuffletriggers\SUPER MARIO BROS NES.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="_shuffletriggers\SUPER MARIO BROTHERS 2 NES.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	  <None Update="_shuffletriggers\SUPER MARIO KART SNES.txt">
