@@ -631,7 +631,6 @@
 	  <None Update="_lifesettings\SUPER MARIO BROTHERS 2 NES.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
-		
 	  <None Update="_lifesettings\SUPER MARIO KART SNES.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
