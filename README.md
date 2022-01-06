@@ -15,8 +15,11 @@ Go to the *File* menu and select *Begin Shuffler* to start playing
 Latest version of the setup information is at https://www.alistairaitcheson.com/games/bizhawk-ring-shuffler.html
 
 ---
+---
+---
+---
 
-# BizHawk - Instructions for Building from Source
+# Instructions for Building from Source
 
 A multi-system emulator written in C#. As well as quality-of-life features for casual players, it also has recording/playback and debugging tools, making it the first choice for TASers (Tool-Assisted Speedrunners).
 
