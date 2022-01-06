@@ -1,6 +1,6 @@
 # Installing the Ring Shuffler
 
-[Download v1.5 of the shuffler from this link](https://www.alistairaitcheson.com/downloads/ShufflerHawk_1_5.zip)
+[Download v1.5 of the shuffler from this link](https://www.alistairaitcheson.com/bizhawk/latest/index.html)
 
 Unzip the downloaded file
 
@@ -14,10 +14,11 @@ Go to the *File* menu and select *Begin Shuffler* to start playing
 
 Latest version of the setup information is at https://www.alistairaitcheson.com/games/bizhawk-ring-shuffler.html
 
+
 ---
+
 ---
----
----
+
 
 # Instructions for Building from Source
 
