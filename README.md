@@ -1,12 +1,12 @@
 # Installing the Ring Shuffler
 
-[Download v1.5 of the shuffler from this link](https://www.alistairaitcheson.com/bizhawk/latest/index.html)
+[Download latest version of the shuffler from this link](https://www.alistairaitcheson.com/bizhawk/latest/index.html)
 
 Unzip the downloaded file
 
 Put the ROMs you want to use in the *_magicbox* folder
 
-Open *ShufflerHawk_1_5.exe*
+Open *ShufflerHawk_1_XX.exe*
 
 Go to the *File* menu and select *Begin Shuffler* to start playing
 
