@@ -4,11 +4,11 @@
 
 Unzip the downloaded file
 
-Put the ROMs you want to use in the _magicbox folder
+Put the ROMs you want to use in the *_magicbox* folder
 
-Open ShufflerHawk_1_5.exe
+Open *ShufflerHawk_1_5.exe*
 
-Go to the File menu and select Begin Shuffler to start playing
+Go to the *File* menu and select *Begin Shuffler* to start playing
 
 ## Further Setup information
 
