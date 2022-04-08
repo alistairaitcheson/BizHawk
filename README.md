@@ -1,4 +1,26 @@
-# BizHawk
+# Installing the Ring Shuffler
+
+[Download latest version of the shuffler from this link](https://www.alistairaitcheson.com/bizhawk/latest/index.html)
+
+Unzip the downloaded file
+
+Put the ROMs you want to use in the *_magicbox* folder
+
+Open *ShufflerHawk_1_XX.exe*
+
+Go to the *File* menu and select *Begin Shuffler* to start playing
+
+## Further Setup information
+
+Latest version of the setup information is at https://www.alistairaitcheson.com/games/bizhawk-ring-shuffler.html
+
+
+---
+
+---
+
+
+# Instructions for Building from Source
 
 A multi-system emulator written in C#. As well as quality-of-life features for casual players, it also has recording/playback and debugging tools, making it the first choice for TASers (Tool-Assisted Speedrunners).
 
