@@ -963,10 +963,11 @@ namespace BizHawk.Client.Common
 			checkFrameWorker.RunWorkerAsync();
 			*/
 
+			/*
 			StreamWriter gameWriter = new StreamWriter("now_playing.txt");
 			gameWriter.Write("Now playing: " + rom.GameInfo.Name.Split(new string[] { "(", "[" }, StringSplitOptions.None)[0]);
 			gameWriter.Close();
-
+			*/
 
 			return true;
 		}
