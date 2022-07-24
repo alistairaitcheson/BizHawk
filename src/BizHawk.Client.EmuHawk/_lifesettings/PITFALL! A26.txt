@@ -1,0 +1,2 @@
+period>60
+state>byte:0000/value:A0/domain:DEFAULT

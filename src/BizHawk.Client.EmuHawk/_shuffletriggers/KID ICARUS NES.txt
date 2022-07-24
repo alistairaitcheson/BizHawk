@@ -1,0 +1,2 @@
+score>bytes:131,132/base:256/minChange:0/maxChange:2147483647/delay:0/domain:RAM/controlOutput:PRESS/enabled:True/isTracker:False/trackerDivisor:1/blockFromZero:False/steppedChangeEventBuffer:0
+hearts>bytes:14A,14B/base:256/minChange:0/maxChange:2147483647/delay:0/domain:RAM/controlOutput:PRESS/enabled:True/isTracker:False/trackerDivisor:1/blockFromZero:False/steppedChangeEventBuffer:0
