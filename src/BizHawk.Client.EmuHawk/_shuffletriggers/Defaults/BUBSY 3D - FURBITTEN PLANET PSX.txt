@@ -1,0 +1,1 @@
+atom>bytes:1D9374/base:256/minChange:0/maxChange:2147483647/delay:0/domain:DEFAULT/controlOutput:PRESS/enabled:True/isTracker:False/trackerDivisor:1/blockFromZero:False/steppedChangeEventBuffer:0
