@@ -1,0 +1,1 @@
+wool>bytes:1EB2/base:256/minChange:0/maxChange:2147483647/delay:0/domain:WRAM/controlOutput:PRESS/enabled:True/isTracker:False/trackerDivisor:1/blockFromZero:False/steppedChangeEventBuffer:0
